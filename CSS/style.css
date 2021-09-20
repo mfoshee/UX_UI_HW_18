@@ -34,7 +34,6 @@
   opacity: 57%;
   padding-top: 65px;
   text-align: center;
-
 }
 
 .social {
@@ -43,6 +42,30 @@
 
 .logo {
   opacity: 100%;
+}
+
+a {
+color: inherit;
+text-decoration: inherit;
+}
+
+.link {
+  color: #DE007A;
+  text-decoration: underline;
+  font-family: open-sans, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #59ABD0;
+  text-decoration: underline;
+  font-family: open-sans, sans-serif;
+  font-weight: 800;
+  font-style: bold;
+  font-size: 18px;
 }
 
 .headerGrid {
@@ -74,22 +97,16 @@ body {
   width: 65%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  flex-direction: row;
 }
 
 .case1, .case3 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  width: 75%;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
-.case3 .lineGradient {
-  position: relative;
-left: -100px;
-width: 550px;
+.case2 {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 
@@ -133,6 +150,7 @@ h3{
   color: #DE007A;
   text-align: center;
   margin-top: 100px;
+  margin-bottom: 15px;
 }
 
 h5{
@@ -146,19 +164,24 @@ h5{
   margin-top: 42px;
 }
 
-.lineGradient {
-  display: block;
-  z-index: 1;
-  margin-left: auto;
-  margin-right: auto; 
-  width: 600px;
-  z-index: 1;
+h7 {
+  color: #5A5A5A;
+  font-size: 18px;
+  font-family: open-sans, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 22px;
 }
 
-.lineGrad {
-  display: block;
-  z-index: 1;
-  width: 600px;
+h8 {
+  color: #DE007A;
+  font-size: 20px;
+  font-family: open-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  white-space: nowrap;
+  line-height: 1px;
+  text-transform: uppercase;
 }
 
 .centerCase {
@@ -173,8 +196,6 @@ h5{
 
 .separator {
   width: 400px;
-  margin-top: -30px;
-  margin-bottom: 70px;
 }
 
 .myPhoto {
@@ -192,6 +213,9 @@ h5{
   z-index: -1;
   float: left;
   margin: 8px;
+  padding-right: 40px;
+  width: 310px;
+  z-index: 0;
 }
 
 .edPhoto {
@@ -203,7 +227,9 @@ h5{
 }
 
 p {
-  font-family: sans-serif;
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   display: left;
   font-size: 18px;
   line-height: 27px;
@@ -218,15 +244,362 @@ p {
 .studies {
   width: 70%;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
-hr {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-width: 1px;
-  background-image: linear-gradient(red, blue);  
-  width: 110%;
+#lineGrad {
+  background: #DE007A;
+  background: -moz-linear-gradient(left, #DE007A 0%, #AA6CA6 50%, #59ABD0 100%);
+  background: -webkit-linear-gradient(left, #DE007A 0%, #AA6CA6 50%, #59ABD0 100%);
+  background: linear-gradient(to right, #DE007A 0%, #AA6CA6 50%, #59ABD0 100%);
+  }
+
+  #lineGrad {
+    min-height: 2px;
+    text-align: left;
+    width: 650px;
+    z-index: 1;
+    border: none;
+  }
+
+  #lineGrad2 {
+    background: #DE007A;
+    background: -moz-linear-gradient(left, #DE007A 0%, #AA6CA6 50%, #59ABD0 100%);
+    background: -webkit-linear-gradient(left, #DE007A 0%, #AA6CA6 50%, #59ABD0 100%);
+    background: linear-gradient(to right, #DE007A 0%, #AA6CA6 50%, #59ABD0 100%);
+    }
+  
+    #lineGrad2 {
+      min-height: 2px;
+      text-align: left;
+      width: 350px;
+      border: none;
+    }
+    #lineGrad3 {
+      background: #DE007A;
+      background: -moz-linear-gradient(left, #DE007A 0%, #AA6CA6 50%, #59ABD0 100%);
+      background: -webkit-linear-gradient(left, #DE007A 0%, #AA6CA6 50%, #59ABD0 100%);
+      background: linear-gradient(to right, #DE007A 0%, #AA6CA6 50%, #59ABD0 100%);
+      }
+    
+      #lineGrad3 {
+        min-height: 2px;
+        text-align: left;
+        width: 100%;
+        border: none;
+      }
+
+
+ .navigation:hover {
+   color: #DE007A;
+   font-weight: 600;
+   opacity: 100%;
+   cursor: pointer;
+ }
+
+ .social:hover {
+   transform: scale(1.1, 1.1);
+   cursor: pointer;
+ }
+
+ .hamburger {
+  display: none;
+}
+
+ @media only screen and (max-width: 767px) {
+ 
+  #navigation {
+    display: center;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    background-color: white;
+    background-image: url("../images/gradient.png"), url("../images/puzzle_piece.png");
+    background-repeat: no-repeat;
+    background-position-x: auto;
+    background-position-y: 0;
+    background-size: cover;
+  }
+  
+  .headerGrid {
+    display:inline;
+    text-align: center;
+    width: 100%;   
+    background-size: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 0;
+  }
+
+  .navigation {
+      display: none;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #DE007A;
+}
+
+  .hamburger {
+    display: inline;
+    cursor: pointer;
+  }
+
+
+
+/* hero */
+.content {
+  margin-top: 200px;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 100%;
+  align-content: center;
+  overflow-wrap: normal;
+}
+
+.content .case1 .case2 {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: auto;
+    align-content: center;
+    overflow-wrap: normal;
+  }
+  .content2 .case3 {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: auto;
+    align-content: center;
+    overflow-wrap: normal;
+  }
+
+  p {
+    text-align: justify;
+    width: 130%;
+  }
+
+  h2 {
+    color: #DE007A;
+    font-size: 28px;
+    font-family: gala, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 10px;
+    white-space: nowrap;
+  }
+  
+  h1 {
+    color: #DE007A;
+    font-size: 42px;
+    font-family: gala, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    white-space: nowrap;
+    line-height: 1px;
+  }
+  
+    #lineGrad {
+      min-height: 2px;
+      width: auto;
+      z-index: 1;
+      border: none;
+    }
+
+  body {
+    background-image: none;
+  }
+
+  .myPhoto {
+    align-content: right;
+    align-self: flex-start;
+    z-index: -1;
+    float: right;
+    margin: 6px;
+    margin-top: -5px;
+    width: 130px;
+    height: 126px;
+    padding-right: 10%;
+  }
+
+  .bodySpan {
+    overflow-wrap: normal;
+    margin-bottom: 0;
+    width: 130%;
+  }
+
+
+
+ /* case studies */
+ h3{
+  font-size: 36px;
+  margin-top: 25px;
+}
+
+.studies p {
+  overflow-wrap: normal;
+  width: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: justify;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.studies {
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.case1, .case3, .case2  {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.tfcPhoto {
+  align-self: flex-start;
+  z-index: -1;
+  float: left;
+  margin: 8px;
+  padding-right: 7px;
+  width: 40%;
+  height: 40%;
+  z-index: 0;
+  padding-left: 8%;
+}
+
+.edPhoto {
+  align-self: flex-start;
+  z-index: -1;
+  float: left;
+  margin: 8px;
+  padding-right: 7px;
+  width: 40%;
+  height: 40%;
+  z-index: 0;
+  padding-left: 8%;
+}
+
+h4 {
+  color: #DE007A;
+  font-size: 24px;
+  font-family: open-sans-condensed, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  white-space: normal;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-right: 10%;
   z-index: 1;
-} 
+  vertical-align: bottom;
+}
+
+.studies #lineGrad {
+  display: none;
+}
+
+/* footer */
+  .footerGrid {
+    display:inline;
+    background-image: url("../images/gradient.png");
+    background-repeat: no-repeat;
+    background-position-y: 0;
+  }
+
+  .childLogo {
+    display: inline;
+    padding: 0;
+  }
+  
+  .childName {
+    display: inline;
+    text-align: center;
+    padding: 0;
+  }
+
+  .footerGrid .navigation {
+    display: list-item;
+    line-height: 20px;
+    padding-top: 10px;
+    text-align: center;
+
+  }
+
+  .footerGrid .social {
+    padding-top: 10px;
+  }
+
+
+  }
+ 
+
+
+/* Case Study - The Frederick Center */
+.tfcPhoto2 {
+  height: 150px;
+  width: 155px;
+  margin-top: 65px;
+}
+
+h6 {
+  color: #DE007A;
+  font-size: 24px;
+  font-family: open-sans-condensed, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  white-space: normal;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-right: 10%;
+  z-index: 1;
+  vertical-align: bottom;
+  overflow-wrap: normal;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.containerGrid2 {
+  display: grid;
+  height: span;
+  padding: 30px;
+  grid-template-areas:
+    "sidebar studyContent"
+  }
+
+.sidebar {
+  grid-area: auto;
+  width: 182px;
+  position: sticky;
+  margin-left: 30px;
+  margin-top: 15px;
+  padding: 10px;
+
+}
+
+.studyContent {
+  grid-area: auto;
+  width: 780px;
+  text-align: left;
+  padding: 10px;
+}
+
+ul {
+  color: #797979;
+  font-size: 18px;
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: left;
+  font-size: 18px;
+  line-height: 27px;
+  color: #797979;}
+/* https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci */
+}
+
+
 
