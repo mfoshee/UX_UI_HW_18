@@ -258,11 +258,11 @@ p {
   #lineGrad {
     min-height: 2px;
     text-align: left;
-    width: 850px;
+    /* width: 850px; */
     z-index: 1;
     border: none;
-    position: relative;
-    left: 50px;
+    /* position: relative; */
+    /* left: 50px; */
   }
 
   #lineGrad2 {
@@ -418,15 +418,16 @@ p {
   }
 
   .myPhoto {
-    align-content: right;
+    /* align-content: right; */
     align-self: flex-start;
     z-index: -1;
     float: right;
-    margin: 6px;
-    margin-top: -5px;
-    width: 130px;
-    height: 126px;
-    padding-right: 10%;
+    margin: 8px;
+    /* margin-top: -5px; */
+    width: 100%;
+    position: relative;
+    /* height: 126px;
+    padding-right: 10%; */
   }
 
   .bodySpan {
